@@ -1,4 +1,4 @@
-* {
+/** {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
@@ -10,9 +10,9 @@ ul {
 
 body {
   font-family: "Montserrat", sans-serif;
-}
+}*/
 
-/* HEADER */
+/* HEADER 
 header {
   background-color: #c63131;
   display: flex;
@@ -20,12 +20,12 @@ header {
   padding: 8px 15px 5px 15px;
 }
 
-.logo img {
+.menu-logo img {
   height: auto;
   max-width: 100%;
 }
 
-.logo {
+.menu-logo {
   padding-right: 18px;
 }
 
@@ -92,18 +92,18 @@ li:last-child {
   margin-left: 10px;
   border: 1px solid #fff;
   transition: 0.3s;
-}
+}*/
 
-/* BANNER */
-.mySlides {
+/* BANNER
+.slideshow-slide {
   display: none;
 }
-.banner {
+.slideshow-img {
   vertical-align: middle;
   max-height: 300px;
 }
 
-.slideshow-container {
+.slideshow {
   max-width: 100%;
   position: relative;
   margin: auto;
@@ -163,43 +163,43 @@ li:last-child {
   to {
     opacity: 1;
   }
-}
+} */
 
-/* VANTAGENS */
+/* VANTAGENS 
 .vantagens {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 50px;
 }
 
-.div-img-vantagens {
+.vantagens-div {
   margin-bottom: 15px;
   text-align: center;
 }
 
-.img-vantagens1,
-.img-vantagens3 {
+.vantagens-img-1,
+.vantagens-img-3 {
   max-height: 38px;
 }
 
-.img-vantagens2 {
+.vantagens-img-2 {
   height: 40px;
 }
 
-.img-vantagens4 {
+.vantagens-img-4 {
   height: 27px;
 }
 
-.img-vantagens5 {
+.vantagens-img-5 {
   height: 28px;
 }
 
-.texto-vantagens {
+.vantagens-texto {
   text-align: center;
   font-weight: 600;
   color: #303030;
   font-size: 15px;
-}
+}*/
 
 /* PRODUTOS 
 .produtos {
