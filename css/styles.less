@@ -1,10 +1,14 @@
 /* CORES DO SITE - FONTE */
+@branco: #fff;
 @cinza-claro-1: #fafaf9;
 @cinza-claro: #f4f4f4;
 @cinza-medio: #9b9b9b;
+@cinza-medio-1: #54596e;
 @cinza-escuro: #303030;
 @vermelho: #c63131;
-@branco: #fff;
+@verde: #48e4c2;
+@laranja: #ffa024;
+@rosa: #ff7c7f;
 
 /* FONTE FAMILY */
 @fredoka: "Fredoka One", cursive;
@@ -20,6 +24,84 @@ a {
 img {
   height: auto;
   max-width: 100%;
+}
+.botao-transparente {
+  background-color: transparent;
+  color: @branco;
+  cursor: pointer;
+}
+.titulo-main {
+  font-size: 45px;
+  line-height: 1.1;
+  font-family: @fredoka;
+  margin-bottom: 1rem;
+}
+
+/* PRODUTOS */
+.produtos {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  justify-content: center;
+  padding: 0 15px;
+  &-img {
+    width: auto;
+    max-height: 193px;
+  }
+  &-titulo {
+    font-size: 26px;
+    font-family: @fredoka;
+    color: @branco;
+    margin-bottom: 20px;
+  }
+  &-descricao {
+    font-size: 15px;
+    font-weight: 300;
+    color: @branco;
+    letter-spacing: 1px;
+    padding: 15px;
+  }
+  &-btn {
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: @branco;
+    border: 3px solid @branco;
+    border-radius: 5px;
+    padding: 8px 45px;
+    &.pulseira {
+      color: @verde;
+    }
+    &.ingressos {
+      color: @laranja;
+    }
+    &.ticket {
+      color: @rosa;
+    }
+    &:hover {
+      .botao-transparente();
+    }
+  }
+  &-div {
+    margin-top: 10px;
+  }
+  &-card {
+    max-width: 330px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    border: 4px solid @cinza-medio-1;
+    border-radius: 5px;
+    margin: 10px 40px;
+  }
+  &-card.pulseira {
+    background-color: @verde;
+  }
+  &-card.ingressos {
+    background-color: @laranja;
+  }
+  &-card.ticket {
+    background-color: @rosa;
+  }
 }
 
 /* VEJA COMO */
@@ -43,10 +125,7 @@ img {
     font-size: 15px;
   }
   &-titulo {
-    font-size: 45px;
-    line-height: 1.1;
-    font-family: @fredoka;
-    margin-bottom: 1rem;
+    .titulo-main();
   }
 }
 .dica {
@@ -93,13 +172,11 @@ img {
   margin-top: 50px;
   &-titulo {
     max-width: 403px;
-    font-size: 45px;
     text-align: center;
     color: @vermelho;
     letter-spacing: 0.9px;
     margin: 0 auto 1rem auto;
-    line-height: 1.1;
-    font-family: @fredoka;
+    .titulo-main();
   }
 }
 
@@ -131,6 +208,9 @@ img {
     background-color: @branco;
     border: 2px solid @branco;
     border-radius: 5px;
+    &:hover {
+      .botao-transparente();
+    }
   }
   &-formulario {
     display: flex;
@@ -260,6 +340,32 @@ form {
 
 /* RESPOSIVO */
 @media screen and (max-width: 900px) {
+  /* 
+    TO-DO: REFAZER
+    */
+  .menu-direito > li a,
+  .menu-esquerdo > li a {
+    font-size: 12px;
+  }
+  .logo {
+    padding-right: 0;
+    min-width: 100px;
+    width: 14.179104478%;
+  }
+  .btn-pedidos {
+    padding: 8px 20px;
+  }
+  header {
+    padding: 15px 15px 15px 15px;
+  }
+
+  .produtos {
+    flex-flow: row wrap;
+    padding-inline-start: 0;
+    &-card {
+      margin: 10px;
+    }
+  }
   .instrucao-content {
     border-radius: 40px;
     max-width: 1340px;
@@ -327,6 +433,15 @@ form {
       > span {
         margin-bottom: 0px;
       }
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .produtos {
+    flex-flow: row wrap;
+    padding-inline-start: 0;
+    &-card {
+      margin: 10px;
     }
   }
 }
