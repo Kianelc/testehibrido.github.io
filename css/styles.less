@@ -12,12 +12,24 @@
 
 /* FONTE FAMILY */
 @fredoka: "Fredoka One", cursive;
+@montserrat: "Montserrat", sans-serif;
 
 /* IMAGENS */
 @cadastro: "../img/fundo-cadastro.png";
 @logo-footer: "../img/logo_hibrido.png";
 
 /* GERAL */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: @montserrat;
+}
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
 }
@@ -35,6 +47,178 @@ img {
   line-height: 1.1;
   font-family: @fredoka;
   margin-bottom: 1rem;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: @vermelho;
+  padding: 8px 15px 5px 15px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  &-logo {
+    padding-right: 18px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &-direito {
+    align-items: center;
+    display: flex;
+  }
+  &-direito > li,
+  &-esquerdo > li {
+    float: left;
+    margin: 0 5px 0 0;
+    padding-left: 20px;
+  }
+  &-direito > li a,
+  &-esquerdo > li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: @branco;
+  }
+}
+
+.btn-pedidos {
+  border: 2px solid @branco;
+  padding: 9px 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+  white-space: nowrap;
+  word-spacing: 5px;
+  &:hover {
+    background-color: @branco;
+    color: @vermelho;
+  }
+  & span:hover {
+    color: @branco;
+    background: @vermelho;
+  }
+}
+
+li:last-child {
+  margin: 0;
+}
+
+.btn-carrinho {
+  padding-right: 0;
+  & span {
+    background-color: @branco;
+    color: @vermelho;
+    width: 52px;
+    height: 50px;
+    border-radius: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border: 1px solid @branco;
+    transition: 0.3s;
+  }
+}
+
+/* SLIDESHOW */
+.slideshow {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  &-slide {
+    display: none;
+  }
+  &-img {
+    vertical-align: middle;
+    max-height: 300px;
+  }
+  &-dot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 1rem;
+  }
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: @vermelho;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin: 0 6px;
+}
+
+.active {
+  border: 2px solid #fff;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* VANTAGENS */
+.vantagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 50px;
+  &-div {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &-img-1,
+  &-img-3 {
+    height: 38px;
+  }
+  &-img-2 {
+    height: 40px;
+  }
+  &-img-4 {
+    height: 27px;
+  }
+  &-img-5 {
+    height: 28px;
+  }
+  &-texto {
+    font-size: 15px;
+    font-weight: 600;
+    color: @cinza-escuro;
+    text-align: center;
+  }
 }
 
 /* PRODUTOS */
@@ -340,14 +524,14 @@ form {
 
 /* RESPOSIVO */
 @media screen and (max-width: 900px) {
-  /* 
-    TO-DO: REFAZER
-    */
+  header {
+    padding: 15px 15px 15px 15px;
+  }
   .menu-direito > li a,
   .menu-esquerdo > li a {
     font-size: 12px;
   }
-  .logo {
+  .menu-logo {
     padding-right: 0;
     min-width: 100px;
     width: 14.179104478%;
@@ -355,10 +539,6 @@ form {
   .btn-pedidos {
     padding: 8px 20px;
   }
-  header {
-    padding: 15px 15px 15px 15px;
-  }
-
   .produtos {
     flex-flow: row wrap;
     padding-inline-start: 0;
