@@ -123,15 +123,21 @@ li:last-child {
 
 .slideshow-dot {
   position: absolute;
-  /*bottom: 25px;*/
-  left: 50%;
-  text-align: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 1rem;
 }
 
-.active,
-.dot:hover {
-  background: transparent;
-  border: 2px solid #c63131;
+.active {
+  border: 2px solid #fff;
 }
 
 .fade {
@@ -429,7 +435,7 @@ form {
   padding-bottom: 15px;
   padding: 0 15px 15px 15px;
 }
-.titulo-pagamento {
+.pagamento-titulo {
   line-height: 1;
   padding-top: 25px;
   font-size: 15px;
@@ -438,56 +444,52 @@ form {
   margin-bottom: 2rem;
 }
 
-/* MAPIAMENTO DA PÁGINA */
+/* MAPIAMENTO DA PÁGINA 
 .footer {
   background-color: #f4f4f4;
 }
-.footer-map {
+.footer > div {
   display: flex;
   justify-content: space-between;
   padding: 50px 15px 150px 15px;
 }
-.mapiamento {
+.footer > div > div {
   display: grid;
   grid-template-columns: auto auto auto;
 }
-
-.mapiamento > div {
+.footer > div > div > div {
   margin-right: 65px;
 }
-
-.titulo-map {
+.footer-titulo {
   line-height: 1;
   margin-bottom: 15px;
   font-size: 14px;
   color: #303030;
   font-weight: 600;
 }
-.link-map,
-.num-map {
+.footer-link,
+.footer-num {
   margin-bottom: 10px;
 }
-.num-map > a {
+.footer-num > a {
   color: #c63131;
   text-decoration: none;
   font-family: "Fredoka One", cursive;
   font-size: 27px;
   margin-top: -10px;
 }
-
-.link-map > a {
+.footer-link > a {
   font-size: 14px;
   color: #9b9b9b;
   text-decoration: none;
   font-weight: 600;
 }
-
-.email-map > a {
+.footer-email > a {
   color: #c63131;
   text-decoration: none;
-}
+}*/
 
-/* ICONS */
+/* ICONS 
 .icon {
   display: flex;
 }
@@ -497,9 +499,9 @@ form {
   color: #c63131;
   margin-left: 40px;
   margin-right: 16px;
-}
+}*/
 
-/* DESENVOLVIDO POR */
+/* DESENVOLVIDO POR 
 .autor {
   text-align: center;
   color: #9b9b9b;
@@ -526,3 +528,4 @@ form {
   transition: 0.3s;
   text-decoration: none;
 }
+*/
