@@ -201,7 +201,7 @@ li:last-child {
   font-size: 15px;
 }
 
-/* PRODUTOS */
+/* PRODUTOS 
 .produtos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -210,19 +210,19 @@ li:last-child {
   text-align: center;
   justify-items: center;
 }
-.img-produtos {
+.produtos-img {
   width: auto;
   max-height: 193px;
 }
 
-.titulo-produtos {
+.produtos-titulo {
   font-family: "Fredoka One", cursive;
   color: white;
   margin-bottom: 20px;
   font-size: 26px;
 }
 
-.descricao-produtos {
+.produtos-descricao {
   color: white;
   font-weight: 300;
   padding: 15px;
@@ -234,7 +234,7 @@ li:last-child {
   text-decoration: none;
 }
 
-.btn-produtos {
+.produtos-btn {
   background-color: white;
   padding: 8px 45px;
   border-radius: 5px;
@@ -243,28 +243,28 @@ li:last-child {
   letter-spacing: 1px;
 }
 
-.btn-produtos.pulseira {
+.produtos-btn.pulseira {
   color: #48e4c2;
 }
-.btn-produtos.ingressos {
+.produtos-btn.ingressos {
   color: #ffa024;
 }
-.btn-produtos.ticket {
+.produtos-btn.ticket {
   color: #ff7c7f;
 }
 
-.btn-produtos:hover,
+.produtos-btn:hover,
 .cadastro-btn:hover {
   background-color: transparent;
   color: white;
   cursor: pointer;
 }
 
-.btn-div {
+.produtos-div {
   margin-top: 10px;
 }
 
-.card-produtos {
+.produtos-card {
   max-width: 330px;
   border: 4px solid #54596e;
   border-radius: 5px;
@@ -273,15 +273,15 @@ li:last-child {
   display: flex;
 }
 
-.card-produtos.pulseira {
+.produtos-card.pulseira {
   background-color: #48e4c2;
 }
-.card-produtos.ingressos {
+.produtos-card.ingressos {
   background-color: #ffa024;
 }
-.card-produtos.ticket {
+.produtos-card.ticket {
   background-color: #ff7c7f;
-}
+}*/
 
 /* VEJA COMO 
 .instrucao {
