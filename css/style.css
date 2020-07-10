@@ -254,7 +254,7 @@ li:last-child {
 }
 
 .btn-produtos:hover,
-.btn-cadastro:hover {
+.cadastro-btn:hover {
   background-color: transparent;
   color: white;
   cursor: pointer;
@@ -283,7 +283,7 @@ li:last-child {
   background-color: #ff7c7f;
 }
 
-/* VEJA COMO */
+/* VEJA COMO 
 .instrucao {
   color: #c63131;
   text-align: center;
@@ -298,22 +298,22 @@ li:last-child {
   height: 1240px;
 }
 
-.img-click {
+.instrucao-img {
   width: 70px;
   margin-top: -3%;
 }
-.titulo-instrucao,
+.instrucao-titulo,
 .titulo-clientes {
   font-family: "Fredoka One", cursive;
   font-size: 45px;
   line-height: 1.1;
   margin-bottom: 1rem;
 }
-.descricao-instrucao {
+.instrucao-descricao {
   font-size: 15px;
 }
 
-.img-instrucao {
+.dica-img {
   max-height: 310px;
   width: 100%;
 }
@@ -332,7 +332,7 @@ li:last-child {
   text-align: right;
 }
 
-.dica-img {
+.dica-div {
   flex-basis: 50%;
 }
 .dica-descricao {
@@ -353,24 +353,23 @@ li:last-child {
 }
 .dica-texto {
   font-size: 14px;
-}
+}*/
 
-/* CLIENTES */
-.titulo-clientes {
+/* CLIENTES 
+.clientes {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.clientes-titulo {
   max-width: 403px;
   margin: 0 auto;
   color: #c63131;
   font-size: 45px;
   text-align: center;
   letter-spacing: 0.9px;
-}
+}*/
 
-.clientes {
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-/* CADASTRO */
+/* CADASTRO
 .cadastro {
   background-color: #c63131;
   background-image: url("../img/fundo-cadastro.png") !important;
@@ -379,13 +378,13 @@ li:last-child {
   justify-content: center;
   align-items: center;
 }
-.titulo-cadastro {
+.cadastro-titulo {
   font-size: 32px;
   line-height: 33px;
   color: white;
   font-family: "Fredoka One", cursive;
 }
-.label-titulo-cadastro {
+.cadastro-label {
   margin: 35px 0 30px 0;
   max-width: 530px;
   display: block;
@@ -401,7 +400,7 @@ input {
   border: none;
   padding-left: 25px;
 }
-.btn-cadastro {
+.cadastro-btn {
   height: 50px;
   background-color: #fff;
   border: 2px solid #fff;
@@ -426,7 +425,7 @@ form {
   align-items: center;
   flex-direction: column;
   margin-bottom: 55px;
-}
+}*/
 
 /* FORMAS DE PAGAMENTO 
 .pagamento {
