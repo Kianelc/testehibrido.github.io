@@ -428,7 +428,7 @@ form {
   margin-bottom: 55px;
 }
 
-/* FORMAS DE PAGAMENTO */
+/* FORMAS DE PAGAMENTO 
 .pagamento {
   display: flex;
   justify-content: space-between;
@@ -443,6 +443,9 @@ form {
   font-weight: 900;
   margin-bottom: 2rem;
 }
+.pagamento-seguranca {
+  margin-top: -15px;
+}*/
 
 /* MAPIAMENTO DA PÁGINA 
 .footer {
