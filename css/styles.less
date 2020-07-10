@@ -1,0 +1,107 @@
+/* CORES DO SITE - FONTE */
+@cinza-claro: #f4f4f4;
+@cinza-medio: #9b9b9b;
+@cinza-escuro: #303030;
+@vermelho: #c63131;
+
+/* FONTE FAMILY */
+@fredoka: "Fredoka One", cursive;
+
+/* GERAL */
+a {
+  text-decoration: none;
+}
+
+/* FORMAS DE PAGAMENTO */
+.pagamento {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+  &-titulo {
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1;
+    color: @cinza-escuro;
+    margin-bottom: 1rem;
+    padding-top: 25px;
+  }
+}
+
+/* MAPIAMENTO DA PÁGINA */
+.footer {
+  background-color: @cinza-claro;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 15px 205px 15px;
+  }
+  &-mapiamento {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    > div {
+      margin-right: 65px;
+    }
+  }
+  &-titulo {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: @cinza-escuro;
+    margin-bottom: 15px;
+  }
+  &-link,
+  &-num {
+    margin-bottom: 10px;
+  }
+  &-num > a {
+    font-size: 27px;
+    color: @vermelho;
+    font-family: @fredoka;
+    margin-top: -10px;
+  }
+  &-link > a {
+    font-size: 14px;
+    font-weight: 600;
+    color: @cinza-medio;
+  }
+  &-email > a {
+    color: @vermelho;
+  }
+}
+
+/* ICONS */
+.icon {
+  display: flex;
+  &-map > a {
+    font-size: 30px;
+    font-weight: 100;
+    color: @vermelho;
+    margin: 0 16px 0 40px;
+  }
+}
+
+/* DESENVOLVIDO POR */
+.autor {
+  text-align: center;
+  font-weight: 300;
+  line-height: 20px;
+  color: @cinza-medio;
+  letter-spacing: 0.09px;
+  > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 90px;
+    justify-content: center;
+    align-items: center;
+
+    > span {
+      margin-bottom: 30px;
+    }
+  }
+  &-desenvolvido {
+    color: @cinza-medio;
+    background: url("../img/logo_hibrido.png") no-repeat right center;
+    padding-right: 20px;
+    opacity: 0.4;
+  }
+}
