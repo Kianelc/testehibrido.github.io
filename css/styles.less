@@ -1,11 +1,17 @@
 /* CORES DO SITE - FONTE */
+@cinza-claro-1: #fafaf9;
 @cinza-claro: #f4f4f4;
 @cinza-medio: #9b9b9b;
 @cinza-escuro: #303030;
 @vermelho: #c63131;
+@branco: #fff;
 
 /* FONTE FAMILY */
 @fredoka: "Fredoka One", cursive;
+
+/* IMAGENS */
+@cadastro: "../img/fundo-cadastro.png";
+@logo-footer: "../img/logo_hibrido.png";
 
 /* GERAL */
 a {
@@ -14,6 +20,145 @@ a {
 img {
   height: auto;
   max-width: 100%;
+}
+
+/* VEJA COMO */
+.instrucao {
+  text-align: center;
+  color: @vermelho;
+  background-color: @cinza-claro-1;
+  padding: 130px 0px 20px 0px;
+  &-content {
+    max-width: 1240px;
+    height: 1240px;
+    background-color: @branco;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  &-img {
+    width: 70px;
+    margin-top: -3%;
+  }
+  &-descricao {
+    font-size: 15px;
+  }
+  &-titulo {
+    font-size: 45px;
+    line-height: 1.1;
+    font-family: @fredoka;
+    margin-bottom: 1rem;
+  }
+}
+.dica {
+  max-width: 850px;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: left;
+  margin: 10px auto;
+  &-img {
+    max-height: 310px;
+    width: 100%;
+  }
+  &.aprove {
+    justify-content: end;
+    text-align: right;
+  }
+  &-div {
+    flex-basis: 50%;
+  }
+  &-descricao {
+    display: flex;
+    flex-flow: column;
+    flex-basis: 30%;
+    justify-content: center;
+  }
+  &-numero {
+    font-size: 40px;
+    font-family: @fredoka;
+  }
+  &-titulo {
+    font-size: 27px;
+    font-family: "Fredoka One", cursive;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  &-texto {
+    font-size: 14px;
+  }
+}
+
+/* CLIENTES */
+.clientes {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  &-titulo {
+    max-width: 403px;
+    font-size: 45px;
+    text-align: center;
+    color: @vermelho;
+    letter-spacing: 0.9px;
+    margin: 0 auto 1rem auto;
+    line-height: 1.1;
+    font-family: @fredoka;
+  }
+}
+
+/* CADASTRO */
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  background-color: @vermelho;
+  background-image: url(@cadastro) !important;
+  &-label {
+    display: block;
+    text-align: center;
+    max-width: 530px;
+    margin: 35px 0 30px 0;
+  }
+  &-titulo {
+    font-size: 32px;
+    line-height: 33px;
+    color: @branco;
+    font-family: @fredoka;
+  }
+  &-btn {
+    width: 200px;
+    height: 50px;
+    font-weight: 600;
+    color: @vermelho;
+    background-color: @branco;
+    border: 2px solid @branco;
+    border-radius: 5px;
+  }
+  &-formulario {
+    display: flex;
+    align-items: flex-start;
+  }
+  &-formulario > div:first-child {
+    width: 410px;
+  }
+  &-formulario > div:last-child {
+    margin-left: 10px;
+  }
+}
+input {
+  width: 47%;
+  height: 50px;
+  font-weight: 300;
+  background-color: @branco;
+  border: none;
+  border-radius: 5px;
+  padding-left: 25px;
+  margin-left: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 55px;
 }
 
 /* FORMAS DE PAGAMENTO */
@@ -40,7 +185,7 @@ img {
   > div {
     display: flex;
     justify-content: space-between;
-    padding: 50px 15px 205px 15px;
+    padding: 50px 15px 220px 15px;
   }
   &-mapiamento {
     display: grid;
@@ -107,7 +252,7 @@ img {
   }
   &-desenvolvido {
     color: @cinza-medio;
-    background: url("../img/logo_hibrido.png") no-repeat right center;
+    background: url(@logo-footer) no-repeat right center;
     padding-right: 20px;
     opacity: 0.4;
   }
@@ -115,6 +260,43 @@ img {
 
 /* RESPOSIVO */
 @media screen and (max-width: 900px) {
+  .instrucao-content {
+    border-radius: 40px;
+    max-width: 1340px;
+    padding: 0 15px;
+    margin: 0 15px;
+  }
+  .dica,
+  .dica.aprove {
+    justify-content: center;
+    &-img {
+      margin-left: -20px;
+    }
+    &.aprove {
+      margin-left: 20px;
+    }
+  }
+
+  .cadastro-formulario {
+    flex-direction: column;
+    align-items: center;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    > div:first-child {
+      margin-bottom: 1rem;
+    }
+    > div:last-child {
+      margin-left: 0px;
+    }
+  }
+  input {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
   .pagamento {
     flex-direction: column;
     align-items: center;
@@ -146,5 +328,25 @@ img {
         margin-bottom: 0px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .instrucao-img {
+    margin-top: -10%;
+  }
+  .instrucao-titulo {
+    font-size: 35px;
+  }
+  .instrucao-content {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .dica-img {
+    display: none;
+  }
+  .dica-descricao {
+    flex-basis: 100%;
+    margin: 25px 25px;
   }
 }
