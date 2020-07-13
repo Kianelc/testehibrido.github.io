@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Teste Híbrido</title>
-    <link rel="stylesheet/less" type="text/css" href="css/style.css" />
+    <link rel="stylesheet/css" type="text/css" href="css/style.css" />
     <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js"></script>
+
+    <!-- SLICK CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+
+    <!-- FONTES -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- ICONES -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
@@ -40,60 +47,78 @@
             <div class="slideshow">
                 <div class="slideshow-slide fade">
                     <img src="img/banner1.jpg" class="slideshow-img" style="width:100%">
+                    <img src="img/banner1-mobile.jpg" class="slideshow-img-mobile" style="width:100%">
                 </div>
                 <div class="slideshow-slide fade">
                     <img src="img/banner2.jpg" class="slideshow-img" style="width:100%">
+                    <img src="img/banner2-mobile.png" class="slideshow-img-mobile" style="width:100%">
                 </div>
                 <div class="slideshow-slide fade">
-                    <img src="img/banner3.jpg" class="slideshow-img" style="width:100%">
+                    <img src="img/banner3.png" class="slideshow-img" style="width:100%">
+                    <img src="img/banner3-mobile.png" class="slideshow-img-mobile" style="width:100%">
                 </div>
-                <div class="slideshow-dot">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <div class="slideshow-slide fade">
+                    <img src="img/banner4.png" class="slideshow-img" style="width:100%">
+                    <img src="img/banner4-mobile.png" class="slideshow-img-mobile" style="width:100%">
                 </div>
+                <ul class="slideshow-dot">
+                    <li class="dot"><button  onclick="currentSlide(1)"></button></li>
+                    <li class="dot"><button  onclick="currentSlide(2)"></button></li>
+                    <li class="dot"><button onclick="currentSlide(3)"></button></li>
+                    <li class="dot"><button  onclick="currentSlide(4)"></button></li>
+                </ul>
             </div>
         </section>
         <section class="vantagens">
-            <div>
+            <div class="vantagens-tooltip">
                 <div class="vantagens-div">
                     <img class="vantagens-img-1"
                         src="https://www.printset.com.br/static/frontend/Hibrido/default/pt_BR/images/svg/apelo01.svg"
                         alt="Tradição e confiança">
                 </div>
                 <p class="vantagens-texto">Mais de 22 anos de<br>tradição e confiança</p>
+                <span class="vantagens-tooltiptext">Total segurança para o seu evento em todos os momentos, da entrada a
+                    consumação.</span>
             </div>
-            <div>
+            <div class="vantagens-tooltip">
                 <div class="vantagens-div">
                     <img class="vantagens-img-2"
                         src="https://www.printset.com.br/static/frontend/Hibrido/default/pt_BR/images/svg/apelo02.svg"
                         alt="Qualidade máxima">
                 </div>
                 <p class="vantagens-texto">Qualidade máxima<br>Tyvek®</p>
+                <span class="vantagens-tooltiptext">Total segurança para o seu evento em todos os momentos, da entrada a
+                    consumação.</span>
             </div>
-            <div>
+            <div class="vantagens-tooltip">
                 <div class="vantagens-div">
                     <img class="vantagens-img-3"
                         src="https://www.printset.com.br/static/frontend/Hibrido/default/pt_BR/images/svg/apelo03.svg"
                         alt="Anti-falsificação">
                 </div>
                 <p class="vantagens-texto">Produto com tecnologia<br>anti-falsificação</p>
+                <span class="vantagens-tooltiptext">Total segurança para o seu evento em todos os momentos, da entrada a
+                    consumação.</span>
             </div>
-            <div>
+            <div class="vantagens-tooltip">
                 <div class="vantagens-div">
                     <img class="vantagens-img-4"
                         src="https://www.printset.com.br/static/frontend/Hibrido/default/pt_BR/images/svg/apelo04.svg"
                         alt="Pagamento após a arte aprovada">
                 </div>
                 <p class="vantagens-texto">Pagamento após a<br>arte aprovada</p>
+                <span class="vantagens-tooltiptext">Total segurança para o seu evento em todos os momentos, da entrada a
+                    consumação.</span>
             </div>
-            <div>
+            <div class="vantagens-tooltip">
                 <div class="vantagens-div">
                     <img class="vantagens-img-5"
                         src="https://www.printset.com.br/static/frontend/Hibrido/default/pt_BR/images/svg/apelo05.svg"
                         alt="Agilidade na produção e entrega">
                 </div>
                 <p class="vantagens-texto">Agilidade na<br>produção e entrega</p>
+                <span class="vantagens-tooltiptext">Total segurança para o seu evento em todos os momentos, da entrada a
+                    consumação.</span>
             </div>
         </section>
         <section class="produtos">
@@ -209,26 +234,81 @@
                 <h3 class="clientes-titulo">Veja quem confia e usa Printset</h3>
             </div>
             <div>
-                <ul style="display:flex">
+                <ul class="clientes-slideshow">
                     <li>
-                        <img src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital são josé.png"
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//geen valley.png"
+                            alt="Gream Valley">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//02_1.png"
+                            alt="Beto Carreiro">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//06_1.png"
+                            alt="1007">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//matahari.png"
+                            alt="Matahari">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//shed.png"
+                            alt="Shed">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//p12.png"
+                            alt="P12">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//Marias.png"
+                            alt="Grupo Maria's">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital santa catarina.png"
+                            alt="Hospital Santa Catarina">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital santa isabel.png"
+                            alt="Hospital Santa Isabel">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital são josé.png"
                             alt="Hospital São José">
                     </li>
                     <li>
-                        <img src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital são josé.png"
-                            alt="Hospital São José">
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital do coração.png"
+                            alt="Hospital do Coração">
                     </li>
                     <li>
-                        <img src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital são josé.png"
-                            alt="Hospital São José">
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//Hospital do Cancer de Barretos.png"
+                            alt="Hospital do Câncer de Barretos">
                     </li>
                     <li>
-                        <img src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital são josé.png"
-                            alt="Hospital São José">
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//Irmandade da Santa Casa de Londrina.png"
+                            alt="Irmandade da Santa Casa de Londrina">
                     </li>
                     <li>
-                        <img src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//hospital são josé.png"
-                            alt="Hospital São José">
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//Unimed.png"
+                            alt="Unimed">
+                    </li>
+                    <li>
+                        <img class="clientes-imagem"
+                            src="https://www.printset.com.br/media/contentmanager/content/cache/160x160//Infinity Blue.png"
+                            alt="Infinity Blue">
                     </li>
                 </ul>
             </div>
@@ -334,8 +414,67 @@
         </section>
 
     </footer>
-
     <script src="js/script.js"></script>
+    <!-- JQUERY & SLICK CAROUSEL -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+
+    <script>
+        if ($(window).width() < 790) {
+            $('.vantagens').slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                arrows: false,
+                dots: false,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            arrows: false,
+                            dots: false,
+                            infinite: true
+                        }
+                    }
+                ]
+            });
+        }
+
+        $('.clientes-slideshow').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            prevArrow: '<div class="slide-arrow prev-arrow"><i class="icon-prev"></i></div>',
+            nextArrow: '<div class="slide-arrow next-arrow slick-disabled"><i class="icon-next"></i></div>',
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        arrows: false,
+                        dots: false
+                    }
+                }
+            ]
+        });
+    </script>
 </body>
 
 </html>
