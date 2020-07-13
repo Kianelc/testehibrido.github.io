@@ -9,6 +9,7 @@
 @verde: #48e4c2;
 @laranja: #ffa024;
 @rosa: #ff7c7f;
+@rosa-claro: rgba(255, 220, 221, 0.9);
 
 /* FONTE FAMILY */
 @fredoka: "Fredoka One", cursive;
@@ -79,7 +80,6 @@ header {
   background-color: @vermelho;
   padding: 8px 15px 5px 15px;
 }
-
 .menu {
   display: flex;
   align-items: center;
@@ -110,7 +110,6 @@ header {
     color: @branco;
   }
 }
-
 .btn-pedidos {
   border: 2px solid @branco;
   padding: 9px 30px;
@@ -127,11 +126,9 @@ header {
     background: @vermelho;
   }
 }
-
 li:last-child {
   margin: 0;
 }
-
 .btn-carrinho {
   padding-right: 0;
   & span {
@@ -182,44 +179,21 @@ li:last-child {
     margin-bottom: 1rem;
     align-items: center;
     > li {
-      padding: 0 6px;
+      margin: 0 6px;
       > button {
         cursor: pointer;
-        background: #c63131;
-        color: transparent;
-        border: 0;
+        background: transparent;
+        border: 2px solid @vermelho;
         box-shadow: none;
         border-radius: 50%;
-        padding: 0;
         width: 15px;
         height: 15px;
-        position: relative;
-        bottom: 4px;
-        right: 2px;
-        &::after {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          width: 16px;
-          height: 16px;
-          border-radius: 10px;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background: #c63131;
-          color: #c63131;
-          transition: 0.3s;
-        }
       }
     }
   }
 }
 .active {
-  background: transparent;
-  border: 2px solid #c63131;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
+  background: @vermelho !important;
 }
 .fade {
   -webkit-animation-name: fade;
@@ -280,7 +254,7 @@ li:last-child {
     .vantagens-tooltiptext {
       visibility: hidden;
       width: 180px;
-      background-color: rgba(255, 220, 221, 0.9);
+      background-color: @rosa-claro;
       color: @vermelho;
       text-align: center;
       font-size: 12px;
@@ -300,8 +274,7 @@ li:last-child {
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: rgba(255, 220, 221, 0.9) transparent transparent
-          transparent;
+        border-color: @rosa-claro transparent transparent transparent;
       }
     }
     &:hover .vantagens-tooltiptext {
@@ -363,20 +336,13 @@ li:last-child {
   }
   &-card {
     max-width: 330px;
-    /*height: 430px;
-    display: flex;
-    align-items: center;
-    border: 4px solid @cinza-medio-1;
-    border-radius: 5px;
-    margin: 10px 40px;*/
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     position: relative;
     z-index: 5;
-    border: 4px solid #54596e;
+    border: 4px solid @cinza-medio-1;
     border-radius: 5px;
     height: 430px;
   }
@@ -453,7 +419,7 @@ li:last-child {
   }
   &-titulo {
     font-size: 27px;
-    font-family: "Fredoka One", cursive;
+    font-family: @fredoka;
     margin-bottom: 1rem;
     line-height: 1.1;
   }
