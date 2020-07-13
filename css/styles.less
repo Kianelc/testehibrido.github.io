@@ -17,6 +17,8 @@
 /* IMAGENS */
 @cadastro: "../img/fundo-cadastro.png";
 @logo-footer: "../img/logo_hibrido.png";
+@seta-prev: "../img/seta-prev.svg";
+@seta-next: "../img/seta-next.svg";
 
 /* GERAL */
 * {
@@ -57,6 +59,17 @@ img {
   left: 9px;
   border-radius: 5px;
   transition: 0.5s;
+}
+.icon-arrow {
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-size: 100%;
+  background-position: center;
+  width: 18px;
+  height: 30px;
+  cursor: pointer;
+  display: block;
 }
 
 /* HEADER */
@@ -144,6 +157,9 @@ li:last-child {
   &-img {
     vertical-align: middle;
     max-height: 300px;
+    &-mobile {
+      display: none;
+    }
   }
   &-dot {
     position: absolute;
@@ -158,24 +174,43 @@ li:last-child {
     margin-right: 15%;
     margin-left: 15%;
     margin-bottom: 1rem;
+    align-items: center;
+    > li {
+      padding: 0 6px;
+      > button {
+        cursor: pointer;
+        background: #c63131;
+        color: transparent;
+        border: 0;
+        box-shadow: none;
+        border-radius: 50%;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        position: relative;
+        bottom: 4px;
+        right: 2px;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 10px;
+          transform: translate(-50%, -50%);
+          background: #c63131;
+          transition: 0.3s;
+        }
+      }
+    }
   }
 }
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: @vermelho;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  margin: 0 6px;
-}
-
 .active {
-  border: 2px solid @branco;
+  background: transparent;
+  border: 2px solid #c63131;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
 }
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -228,6 +263,40 @@ li:last-child {
     font-weight: 600;
     color: @cinza-escuro;
     text-align: center;
+  }
+  &-tooltip {
+    position: relative;
+    display: inline-block;
+    .vantagens-tooltiptext {
+      visibility: hidden;
+      width: 180px;
+      background-color: rgba(255, 220, 221, 0.9);
+      color: @vermelho;
+      text-align: center;
+      font-size: 12px;
+      border-radius: 5px;
+      padding: 13px 15px;
+      position: absolute;
+      z-index: 20;
+      bottom: 120%;
+      left: 50%;
+      margin-left: -90px;
+      transition: visibility 0.5s linear, opacity 0.5s linear;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(255, 220, 221, 0.9) transparent transparent
+          transparent;
+      }
+    }
+    &:hover .vantagens-tooltiptext {
+      visibility: visible;
+    }
   }
 }
 
@@ -386,6 +455,7 @@ li:last-child {
 .clientes {
   margin-bottom: 50px;
   margin-top: 50px;
+  padding: 0 15px;
   &-titulo {
     max-width: 403px;
     text-align: center;
@@ -394,6 +464,34 @@ li:last-child {
     margin: 0 auto 1rem auto;
     .titulo-main();
   }
+  &-slideshow {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+  &-imagem {
+    border-radius: 90%;
+    margin: 0 auto;
+  }
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.prev-arrow {
+  left: 0;
+}
+.next-arrow {
+  right: 0;
+}
+.icon-prev {
+  background: url(@seta-prev) no-repeat;
+  .icon-arrow();
+}
+.icon-next {
+  background: url(@seta-next) no-repeat;
+  .icon-arrow();
 }
 
 /* CADASTRO */
@@ -591,7 +689,6 @@ form {
       margin-left: 20px;
     }
   }
-
   .cadastro-formulario {
     flex-direction: column;
     align-items: center;
@@ -649,9 +746,15 @@ form {
   .produtos {
     flex-flow: row wrap;
     padding-inline-start: 0;
-    &-card {
-      margin: 10px;
-    }
+  }
+  .vantagens-div > img {
+    display: inline-block !important;
+  }
+  .slideshow-img {
+    display: none;
+  }
+  .slideshow-img-mobile {
+    display: block;
   }
 }
 
