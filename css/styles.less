@@ -198,12 +198,16 @@ li:last-child {
         right: 2px;
         &::after {
           content: "";
+          display: inline-block;
           position: absolute;
           width: 16px;
           height: 16px;
           border-radius: 10px;
+          top: 50%;
+          left: 50%;
           transform: translate(-50%, -50%);
           background: #c63131;
+          color: #c63131;
           transition: 0.3s;
         }
       }
@@ -431,6 +435,7 @@ li:last-child {
   }
   &.aprove {
     justify-content: end;
+    justify-content: flex-end;
     text-align: right;
   }
   &-div {
